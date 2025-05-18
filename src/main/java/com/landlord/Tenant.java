@@ -1,46 +1,41 @@
 package com.landlord;
 
 public class Tenant {
-    private String name;
     private String tenantId;
-    private double monthlyRent;
+    private String name;
+    private String email;
+    private String phoneNumber;
 
-    // Constructor
-    public Tenant(String name, String tenantId, double monthlyRent) {
-        this.name = name;
+    public Tenant(String tenantId, String name, String email, String phoneNumber) {
         this.tenantId = tenantId;
-        this.monthlyRent = monthlyRent;
-    }
-
-    // Getters and Setters
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
     }
 
     public String getTenantId() {
         return tenantId;
     }
 
-    public void setTenantId(String tenantId) {
-        this.tenantId = tenantId;
+    public String getName() {
+        return name;
     }
 
-    public double getMonthlyRent() {
-        return monthlyRent;
+    public String getEmail() {
+        return email;
     }
 
-    public void setMonthlyRent(double monthlyRent) {
-        this.monthlyRent = monthlyRent;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    // Override toString() to return a formatted string
     @Override
     public String toString() {
-        return "Tenant{name='" + name + "', tenantId='" + tenantId + "', monthlyRent=" + monthlyRent + '}';
+        return "Tenant{" +
+                "TenantID='" + tenantId + '\'' +
+                ", Name='" + name + '\'' +
+                ", Email='" + email + '\'' +
+                ", Phone='" + phoneNumber + '\'' +
+                '}';
     }
 }
-
