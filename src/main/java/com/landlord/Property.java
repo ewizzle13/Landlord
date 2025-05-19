@@ -1,15 +1,17 @@
-package com.landlord;
+package com.example.madbuildllc;
 
 public class Property {
     private String propertyId;
     private String address;
     private double rent;
+    private String landlordId;
     private Tenant tenant;
 
-    public Property(String propertyId, String address, double rent) {
+    public Property(String propertyId, String address, double rent, String landlordId) {
         this.propertyId = propertyId;
         this.address = address;
         this.rent = rent;
+        this.landlordId = landlordId;
     }
 
     public String getPropertyId() {
@@ -20,8 +22,8 @@ public class Property {
         return address;
     }
 
-    public double getRent() {
-        return rent;
+    public String getLandlordId() {
+        return landlordId;
     }
 
     public Tenant getTenant() {
@@ -32,13 +34,7 @@ public class Property {
         this.tenant = tenant;
     }
 
-    @Override
     public String toString() {
-        return "Property{" +
-                "PropertyID='" + propertyId + '\'' +
-                ", Address='" + address + '\'' +
-                ", Rent=$" + rent +
-                (tenant != null ? ", Tenant=" + tenant.getName() : ", Tenant=None") +
-                '}';
+        return "Property ID: " + propertyId + ", Address: " + address + ", Rent: " + rent;
     }
 }
