@@ -1,4 +1,4 @@
-package com.landlord;
+package com.example.madbuildllc;
 
 public class Tenant {
     private String tenantId;
@@ -21,21 +21,7 @@ public class Tenant {
         return name;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    @Override
     public String toString() {
-        return "Tenant{" +
-                "TenantID='" + tenantId + '\'' +
-                ", Name='" + name + '\'' +
-                ", Email='" + email + '\'' +
-                ", Phone='" + phoneNumber + '\'' +
-                '}';
+        return "Tenant ID: " + tenantId + ", Name: " + name + ", Email: " + email + ", Phone: " + phoneNumber;
     }
 }
